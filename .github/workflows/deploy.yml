@@ -25,16 +25,6 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Install dependencies
-      run: |
-        cd server
-        npm install
-        cd ../client
-        npm install
-    - name: Build client
-      run: |
-        cd client
-        npm run build
 
     - name: ssh pipelines
       uses: cross-the-world/ssh-pipeline@master
